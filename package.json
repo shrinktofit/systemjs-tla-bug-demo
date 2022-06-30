@@ -1,0 +1,16 @@
+{
+  "name": "systemjs-tla-bug-demo",
+  "type": "module",
+  "dependencies": {
+    "systemjs": "^6.12.1"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "postinstall": "npm run build",
+    "build": "tsc -b tsconfig-ESM.json && tsc -b tsconfig-SystemJS.json",
+    "start": "http-server -o"
+  }
+}
